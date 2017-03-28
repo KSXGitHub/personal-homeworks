@@ -23,6 +23,8 @@ temp.*
 /dep
 /src/media/*
 !/src/media/*.md
+*.tern-project
+*.tern-project.json
 
 # Logs
 logs

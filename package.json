@@ -18,7 +18,9 @@
     "compile": "node ./script/compile.js",
     "preview": "zsh -c 'sensible-browser ./out/index.html &; exit'",
     "test": "standard && npm run compile",
-    "clean": "zsh script/clean.zsh"
+    "clean": "zsh script/clean.zsh",
+    "test": "npm run compile",
+    "tern": "js-yaml .tern-project.yaml > .tern-project"
   },
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT"
