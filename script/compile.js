@@ -8,6 +8,7 @@ const {info} = global.console
 const jtry = require('just-try')
 const {mkdirSync, writeFileSync} = require('fs-force')
 const rgxmap = require('./build-rules.js')
+const ignore = require('./ignore-rules.js')
 const depsTree = require('./get-deps-tree.js')
 const {projdir, src, out, lib, dep, getlib, jreq, tryReadJSON} = require('../lib/common-vars.js')
 const cmpset = require('../lib/compare-set.js')
@@ -64,6 +65,7 @@ function getChangedFiles () {
 }
 
 function compile (source, target, level) {
+  if (ignore(source)) return
   const stats = statSync(source)
   if (stats.isDirectory()) {
     mkdirSync(target)
