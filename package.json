@@ -12,16 +12,19 @@
     "jstransformer-stylus": "^1.3.0",
     "jstransformer-markdown-it": "^2.0.0",
     "dependency-tree": "^5.9.0",
-    "deepmerge": "^1.3.2"
+    "deepmerge": "^1.3.2",
+    "snyk": "^1.41.1"
   },
   "scripts": {
     "compile": "node ./script/compile.js",
     "preview": "zsh -c 'sensible-browser ./out/index.html &; exit'",
-    "test": "standard && npm run compile",
-    "clean": "zsh script/clean.zsh",
     "test": "npm run compile",
-    "tern": "js-yaml .tern-project.yaml > .tern-project"
+    "clean": "zsh script/clean.zsh",
+    "tern": "js-yaml .tern-project.yaml > .tern-project",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "snyk": true
 }
