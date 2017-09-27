@@ -1,0 +1,16 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.7.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:debug:20170905':
+    - dependency-tree > filing-cabinet > module-lookup-amd > debug:
+        patched: '2017-09-26T22:31:06.949Z'
+    - dependency-tree > filing-cabinet > stylus-lookup > debug:
+        patched: '2017-09-26T22:31:06.949Z'
+    - dependency-tree > precinct > detective-less > debug:
+        patched: '2017-09-26T22:31:06.949Z'
+    - dependency-tree > precinct > detective-sass > debug:
+        patched: '2017-09-26T22:31:06.949Z'
+    - dependency-tree > precinct > detective-scss > debug:
+        patched: '2017-09-26T22:31:06.949Z'
